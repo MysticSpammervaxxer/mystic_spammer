@@ -12,8 +12,6 @@ import json
 import random
 
 
-__VERSION__ = '5.0'
-
 
 GWL_STYLE = -16
 WS_MAXIMIZEBOX = 0x00010000
