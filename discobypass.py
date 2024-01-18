@@ -12,22 +12,6 @@ import json
 import random
 
 
-
-GWL_STYLE = -16
-WS_MAXIMIZEBOX = 0x00010000
-WS_SIZEBOX = 0x00040000
-
-hwnd = ctypes.windll.kernel32.GetConsoleWindow()
-
-style = ctypes.windll.user32.GetWindowLongW(hwnd, GWL_STYLE)
-style &= ~WS_MAXIMIZEBOX
-style &= ~WS_SIZEBOX
-
-ctypes.windll.user32.SetWindowLongW(hwnd, GWL_STYLE, style)
-ctypes.windll.user32.DeleteMenu(hwnd, 0xF000, 0x0001)
-ctypes.windll.user32.RedrawWindow(hwnd, None, None, 0x0400 | 0x0001)
-
-
 def get_discord_username(token):
     try:
         headers = {'authorization': token}
