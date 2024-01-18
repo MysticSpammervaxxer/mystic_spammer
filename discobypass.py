@@ -94,17 +94,6 @@ def send_messages_to_server(token, server_id, channel_id, message_count=10):
         print(f"Error sending messages ({token}): {e}")
 
 
-
-
-def disable_maximize_resize():
-    hwnd = ctypes.windll.kernel32.GetConsoleWindow()
-    style = ctypes.windll.user32.GetWindowLongW(hwnd, -16)
-    style &= ~0x00010000  
-    style &= ~0x00040000 
-    ctypes.windll.user32.SetWindowLongW(hwnd, -16, style)
-    ctypes.windll.user32.ShowWindow(hwnd, 3) 
-
-
 def read_config():
     try:
         with open("config.json", "r") as config_file:
