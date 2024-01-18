@@ -4,6 +4,9 @@ Don't skid the spammer
 
 OWNER vaxxer
 
+
+https://discord.gg/ZNZkxbP6
+
 Functions:
 [1] GrupJoin
 [2] Spammer
